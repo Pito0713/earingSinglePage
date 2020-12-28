@@ -1,0 +1,63 @@
+@import url(../css/css-variable.css);
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto
+}
+a {
+    text-decoration: none;
+}
+a:visited{
+    color:var(--text-color) 
+}
+
+ul {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+li{
+    list-style: none;
+}
+@media screen and (min-width:1440px){
+    .container{
+        width: 1440px;
+    }
+}
+@media screen and (max-width:1441px){
+    .container{
+        width: 1024px;
+    }
+}
+@media screen and (max-width:1025px){
+    .container{
+        width: 768px;
+    }
+}
+@media screen and (max-width:769px){
+    .container{
+        width: 576px;
+    }
+}
+@media screen and (max-width:577px){
+    .container{
+        width: 480px;
+    }
+}
+@media screen and (max-width:481px){
+    .container{
+        width: 360px;
+    }
+}
+@media screen and (max-width:361px){
+    .container{
+        width: 240px;
+    }
+}

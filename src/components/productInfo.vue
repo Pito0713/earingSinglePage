@@ -24,7 +24,7 @@
             <a>-1</a>
           </button>
           <button @click="addCartbackData" >
-            <a @click="coverBackData">送出訂單</a>
+            <button @click="coverBackData">送出訂單</button>
           </button>
         </div>
       </div>
@@ -131,7 +131,10 @@ export default {
         column: this.Products[0].length
       }
       $.get('https://script.google.com/macros/s/AKfycbzKEwZkfPc610W7d8w8cktq6OO2R8Tfw6GgmHe1aZVGDbkXlGQ/exec', parameterEaringBackData)
-      window.location.reload()
+      this.timer = setTimeout(()=>{  //延遲讓後台更新
+        window.location.reload()
+      },1000);
+      
     },
     filterCart () {
       var itemInfo = this.Products[0][0]

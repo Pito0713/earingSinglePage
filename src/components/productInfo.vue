@@ -23,8 +23,8 @@
           <button @click="cutProdcut">
             <a>-1</a>
           </button>
-          <button @click="addCartbackData" >
-            <button @click="coverBackData">送出訂單</button>
+          <button @click="addCartbackData(); coverBackData()" >
+            <a>送出訂單</a>
           </button>
         </div>
       </div>
@@ -133,8 +133,7 @@ export default {
       $.get('https://script.google.com/macros/s/AKfycbzKEwZkfPc610W7d8w8cktq6OO2R8Tfw6GgmHe1aZVGDbkXlGQ/exec', parameterEaringBackData)
       this.timer = setTimeout(()=>{  //延遲讓後台更新
         window.location.reload()
-      },1000);
-      
+      },800);
     },
     filterCart () {
       var itemInfo = this.Products[0][0]
@@ -199,15 +198,14 @@ export default {
 .ProductName {
   font-size: 3vw;
   width: 100%;
-  float: left;
-  padding: 2vw;
+  padding: 1vw;
 }
 .ProuductDescription {
   text-align: start;
   font-size: 1.5vw;
   width: 100%;
   float: left;
-  padding: 2vw;
+  padding: 1vw;
   line-height: 3vw;
   margin-bottom: 3vw;
 }
@@ -216,11 +214,38 @@ export default {
   font-size: 3vw;
   width: 100%;
   text-align: end;
+  a{
+    padding: 0.5vw;
+  }
 }
 .AddProduct{
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 2vw;
+  button {
+      margin: 0.5vw;
+      background-color: #ffffff;
+      border: var(--border-color) 1px solid;
+      color: var(--plat-color);
+      a{
+        font-size: 2vw;
+      }
+  }
+}
+@media screen and (max-width: 425px) {
+  .ProductItem {
+  display: flex;
+  flex-direction: column;
+  }
+  .ProductName{
+    font-size: 5.5vw;
+  }
+  .ProuductDescription {
+  line-height: 7vw;
+  }
+  .ProuductPrice{
+    font-size: 5vw;
+  }
 }
 </style>

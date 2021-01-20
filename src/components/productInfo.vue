@@ -13,8 +13,8 @@
         </div>
         <div class="ProuductPrice">
           <a>NT: {{Product[3]}}</a><br>
-          <a style="font-size:1.5vw">下單{{textComputedStk}}個</a><a style="font-size:1.5vw">共${{TotalPrice}}</a><br>
-          <a style="font-size:1.5vw">目前庫存 {{textComputed}}付</a>
+          <a style="font-size:1.2rem">下單{{textComputedStk}}個</a><a style="font-size:1.2rem">共${{TotalPrice}}</a><br>
+          <a style="font-size:1.2rem">目前庫存 {{textComputed}}付</a>
         </div>
         <div class="AddProduct">
           <button @click="addProdcut">
@@ -196,13 +196,13 @@ export default {
   padding: 2vw;
 }
 .ProductName {
-  font-size: 3vw;
+  font-size: 2rem;
   width: 100%;
   padding: 1vw;
 }
 .ProuductDescription {
   text-align: start;
-  font-size: 1.5vw;
+  font-size: 0.8rem;
   width: 100%;
   float: left;
   padding: 1vw;
@@ -211,7 +211,7 @@ export default {
 }
 .ProuductPrice {
   display: block;
-  font-size: 3vw;
+  font-size: 1.5rem;
   width: 100%;
   text-align: end;
   a{
@@ -229,7 +229,7 @@ export default {
       border: var(--border-color) 1px solid;
       color: var(--plat-color);
       a{
-        font-size: 2vw;
+        font-size: 1rem;
       }
   }
 }
@@ -239,13 +239,13 @@ export default {
   flex-direction: column;
   }
   .ProductName{
-    font-size: 5.5vw;
+    font-size: 1.2rem;
   }
   .ProuductDescription {
   line-height: 7vw;
   }
   .ProuductPrice{
-    font-size: 5vw;
+    font-size: 1.2rem;
   }
 }
 </style>

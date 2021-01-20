@@ -32,7 +32,7 @@
     animation-duration: 4s;
     animation-iteration-count: infinite;
     a {
-      font-size: 2vw;
+      font-size: 1.2rem;
     }
     a:visited {
       color: var(--text-color);
@@ -40,7 +40,7 @@
   }
 }
 .sciocal {
-  font-size: 5vw;
+  font-size: 1.5rem;
 }
 .my-2 {
   margin: 0 4vw;

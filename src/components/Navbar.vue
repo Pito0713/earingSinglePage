@@ -48,7 +48,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 2vw;
+  font-size: 0.8rem;
   li {
     justify-content: end;
   }

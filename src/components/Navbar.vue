@@ -8,8 +8,10 @@
         <li class="nav-Item">
           <a href="https://pito0713.github.io/earIngProudct">耳環 Earrings</a>
         </li>
-        <li class="nav-Item">購物車 Cart</li>
-        <li class="nav-Item">會員 mender</li>
+        <li class="nav-Item">
+          <a href="https://pito0713.github.io/carcartEaring/"
+          >購物車 Cart</a>
+        </li>
       </ul>
     </div>
   </nav>

@@ -1,4 +1,3 @@
-
 <template>
   <div class="footer">
     <div class="sciocal">
@@ -8,13 +7,14 @@
         <a href="https://www.instagram.com/miruku.acc/">follow</a>
       </button>
     </div>
-    <a>© 2020.09.30 By Pito</a>
+    <a>© 2020.09.18 By Pito</a>
   </div>
 </template>
 
 <style scoped lang="scss">
 .footer {
   display: flex;
+  position: relative;
   width: 100%;
   border-top: 2.5px solid var(--border-color);
   background-color: var(--background-color);
@@ -32,7 +32,7 @@
     animation-duration: 4s;
     animation-iteration-count: infinite;
     a {
-      font-size: 1.2rem;
+      font-size: 2vw;
     }
     a:visited {
       color: var(--text-color);
@@ -40,7 +40,7 @@
   }
 }
 .sciocal {
-  font-size: 1.5rem;
+  font-size: 5vw;
 }
 .my-2 {
   margin: 0 4vw;

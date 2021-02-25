@@ -117,7 +117,7 @@ export default {
         url: 'https://docs.google.com/spreadsheets/d/1nXquMbDuBjMx2Eo7qO1XBKNrJBm8xNGRGexuOFozlts/edit#gid=0',
         name: '工作表1',
         data: data.toString(),
-        row: this.Products[0][0] + 2, // execl第2行開始
+        row: this.Products[0][0] + 1, // execl第2行開始
         column: this.Products[0].length
       }
       $.get('https://script.google.com/macros/s/AKfycbxQ5_HzD8ow_wRBH839AXXptKL_JqbA1DsiO55iwsL33pyhshUA/exec', parameter)

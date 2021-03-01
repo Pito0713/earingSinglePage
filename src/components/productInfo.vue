@@ -53,9 +53,9 @@ export default {
         this.ProductDataStorage = this.Products[0][4] - 1 // 暫存
         this.Products[0][4] = this.ProductDataStorage // 取代實際量
         this.ProductDataStorageStk = this.ProductDataStorageStk + 1 // 目前下單量
-        console.log(this.Products)
-        console.log(this.ProductDataStorage)
-        console.log(this.ProductDataStorageStk)
+        //console.log(this.Products)
+        //console.log(this.ProductDataStorage)
+        //console.log(this.ProductDataStorageStk)
       }
     },
     cutProdcut () {

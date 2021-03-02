@@ -29,6 +29,7 @@
         </div>
       </div>
     </div>
+    <div class="reload" v-show="reload"> <a>重新載入</a></div>
   </div>
 </template>
 
@@ -42,7 +43,8 @@ export default {
       ProductDataStorage: '',
       ProductDataStorageStk: 0, // 回傳給購物車的數據
       cartStorageStk: 0,
-      Carts: []
+      Carts: [],
+      reload: false,
     }
   },
   methods: {
@@ -63,9 +65,9 @@ export default {
         this.ProductDataStorage = this.Products[0][4] + 1
         this.Products[0][4] = this.ProductDataStorage
         this.ProductDataStorageStk = this.ProductDataStorageStk - 1
-        console.log(this.Products)
-        console.log(this.ProductDataStorage)
-        console.log(this.ProductDataStorageStk)
+        //console.log(this.Products)
+        //console.log(this.ProductDataStorage)
+        //console.log(this.ProductDataStorageStk)
       }
     },
     addCartbackData () {
@@ -75,8 +77,8 @@ export default {
       } else {
         this.cartStorageStk = this.ProductDataStorageStk
       }
-      console.log(this.ProductDataStorageStk)
-      console.log(this.cartStorageStk)
+      //console.log(this.ProductDataStorageStk)
+      //console.log(this.cartStorageStk)
       var data = [[
         this.Products[0][0],
         this.Products[0][1],
@@ -131,9 +133,10 @@ export default {
         column: this.Products[0].length
       }
       $.get('https://script.google.com/macros/s/AKfycbzKEwZkfPc610W7d8w8cktq6OO2R8Tfw6GgmHe1aZVGDbkXlGQ/exec', parameterEaringBackData)
+      this.reload = !this.reload
       this.timer = setTimeout(()=>{  //延遲讓後台更新
         window.location.reload()
-      },800);
+      },1000);
     },
     filterCart () {
       var itemInfo = this.Products[0][0]
@@ -142,7 +145,7 @@ export default {
           return item[0] === itemInfo// 篩掉其他
         }
       )
-      console.log(this.Carts)
+      //console.log(this.Carts)
     }
   },
   computed: {
@@ -202,7 +205,6 @@ export default {
 }
 .ProuductDescription {
   text-align: start;
-  font-size: 0.8rem;
   width: 100%;
   float: left;
   padding: 1vw;
@@ -217,6 +219,14 @@ export default {
   a{
     padding: 0.5vw;
   }
+}
+.reload{
+  display: block;
+  position: fixed;
+  top:50%;
+  left: calc(50% - 4rem);
+  background-color: var(--background-color);
+  font-size: 2rem;
 }
 .AddProduct{
   display: flex;
